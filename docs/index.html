@@ -3,149 +3,252 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/images/Symbol.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&amp;display=swap" rel="stylesheet">
-    <title>Misocial - Social Marketing Analytics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;family=Roboto+Slab:wght@300..700&amp;display=swap" rel="stylesheet">
+    <title>Startup - Creative Agency Template</title>
     <script type="module" crossorigin src="./assets/js/main.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/js/app.js">
     <link rel="stylesheet" crossorigin href="./assets/styles.css">
   </head>
   <body>
     <div class="overlay"></div>
-    <header>
-      <div class="light wrapper header_wrapper menu_flex">
-        <div class="logo_mobile logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span class="nazva">misocial</span></a></div>
-            <button class="burger" type="button" aria-label="Toggle menu">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
+    <header id="home">
+      <div class="wrapper header_wrapper menu_flex">
+        <div class="logo"><a href="index.html"><span class="nazva">Startup</span></a></div>
+            <button class="burger" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
             <div class="navigation">
-              <div class="logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span class="nazva">misocial</span></a></div>
+              <button class="x" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
               <div class="lopata">
-                <div class="x">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="30" height="30">
-<path fill="rgb(255, 255, 255)" d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"/>
-</svg>
-                </div>
                 <nav>
                   <ul class="menu">
-                    <li><a href="index.html">Home </a></li>
-                    <li><a href="#">Why MISOCIAL </a></li>
-                    <li><a href="#">Features </a></li>
-                    <li><a href="#">Articles </a></li>
-                    <li><a href="#">Pricing </a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
                   </ul>
-                </nav><a class="btn" href="#">get started</a>
+                </nav>
               </div>
             </div>
       </div>
-      <div class="header_flex">
-        <div class="main_conteiner wrapper">
-          <p class="social_marketing">SOCIAL MARKETING ANALYTICS</p>
-          <h1 class="pricing_table">Pricing Table</h1>
-          <div class="pricing_table_p">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
-            <p>elit, sed do eiusmod tempor incididunt ut</p>
-          </div>
-        </div><a class="arrow" href="#pricing">
-           <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 640 640"><path fill="#9fa4af" d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"/></svg></a>
+      <div class="hero wrapper">
+        <h1 class="hero_title">Welcome to Startup</h1>
+        <p class="hero_text">Your Favourite Creative Agency Template</p><a class="btn" href="#services">Get started</a>
       </div>
     </header>
     <main>
-      <section class="wrapper aic" id="pricing">
-        <div class="pricing_text">
-          <p id="misocial">MISOCIAL  </p>
-          <h2 class="select_a_plan">Select a plan</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-          <p>elit, sed do eiusmod tempor incididunt ut.</p>
-        </div>
-        <div class="grid col_3 dark cards gap">
-              <figure class="card aic"><img class="card_img" src="./assets/images/spytnik.svg" alt="satelite">
-                <figcaption class="aic">
-                  <p class="personal">personal</p>
-                  <p class="price"> <span class="currency">$</span><b>0</b>/month</p>
-                  <ul class="description"> 
-                    <li>Lorem ipsum dolor sit amet. </li>
-                    <li>sed do eiusmod tempor incididunt ut. </li>
-                    <li>Labore et dolore magna aliqua. </li>
-                    <li>quis nostrud exercitation ullamco laboris. </li>
-                    <li>Ea commodo consequat. </li>
-                  </ul><a class="btn card_btn" href="#">select plan</a>
-                </figcaption>
-              </figure>
-              <figure class="card aic"><img class="card_img" src="./assets/images/marsohod.svg" alt="rover">
-                <figcaption class="aic">
-                  <p class="personal">personal</p>
-                  <p class="price"> <span class="currency">$</span><b>29</b>/month</p>
-                  <ul class="description"> 
-                    <li>Lorem ipsum dolor sit amet. </li>
-                    <li>sed do eiusmod tempor incididunt ut. </li>
-                    <li>Labore et dolore magna aliqua. </li>
-                    <li>quis nostrud exercitation ullamco laboris. </li>
-                    <li>Ea commodo consequat. </li>
-                  </ul><a class="btn card_btn" href="#">select plan</a>
-                </figcaption>
-              </figure>
-              <figure class="card aic"><img class="card_img" src="./assets/images/rocket.svg" alt="rocket">
-                <figcaption class="aic">
-                  <p class="personal">personal</p>
-                  <p class="price"> <span class="currency">$</span><b>49</b>/month</p>
-                  <ul class="description"> 
-                    <li>Lorem ipsum dolor sit amet. </li>
-                    <li>sed do eiusmod tempor incididunt ut. </li>
-                    <li>Labore et dolore magna aliqua. </li>
-                    <li>quis nostrud exercitation ullamco laboris. </li>
-                    <li>Ea commodo consequat. </li>
-                  </ul><a class="btn card_btn" href="#">select plan</a>
-                </figcaption>
-              </figure>
+      <section class="section" id="services">
+        <div class="wrapper">
+          <div class="section_head">
+            <h2 class="section_title">Services</h2>
+            <p class="section_subtitle">We offer ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+          </div>
+          <div class="services">
+                <article class="service">
+                  <div class="service_icon active"><svg viewBox="0 0 40 40"><text x="20" y="30" text-anchor="middle" font-size="32" font-weight="bold" font-family="Georgia, serif" fill="currentColor">A</text></svg>
+                  </div>
+                  <h3 class="service_title">Clean Typography</h3>
+                  <p class="service_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
+                </article>
+                <article class="service">
+                  <div class="service_icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 12L6 20l8 8M26 12l8 8-8 8M23 9l-6 22"/></svg>
+                  </div>
+                  <h3 class="service_title">Rock Solid Code</h3>
+                  <p class="service_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
+                </article>
+                <article class="service">
+                  <div class="service_icon"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="6"/><path d="M10 10l6 6M30 10l-6 6M10 30l6-6M30 30l-6-6"/></svg>
+                  </div>
+                  <h3 class="service_title">Expert Support</h3>
+                  <p class="service_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.</p>
+                </article>
+          </div>
         </div>
       </section>
-      <section class="main_get_started aic">
-        <div class="lopata2">
-          <p>SOCAL MARKETING ANALYTICS</p>
-          <h2>Take control of your data</h2>
+      <section class="section section_gray" id="about">
+        <div class="wrapper">
+          <div class="section_head">
+            <h2 class="section_title">About us</h2>
+            <p class="section_subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+          </div>
+          <div class="about_text">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirmod tempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos et accusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sediam nonumy eirtempor invidunt ut labore et dolore aliquyam erat, sed diam voluptua. At vero eos eaccusam et justo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor et dolore aliquyam erat. Loreipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod.</p>
+          </div>
+          <div class="team">
+                <article class="team_member"><img class="team_photo" src="./assets/images/team-1.jpg" alt="Md. Khalil Uddin">
+                  <h3 class="team_name">Md. Khalil Uddin</h3>
+                  <p class="team_role">Head of Ideas</p>
+                </article>
+                <article class="team_member"><img class="team_photo" src="./assets/images/team-2.jpg" alt="Rubel Miah">
+                  <h3 class="team_name">Rubel Miah</h3>
+                  <p class="team_role">Lead WordPress Developer</p>
+                </article>
+                <article class="team_member"><img class="team_photo" src="./assets/images/team-3.jpg" alt="Shamim Mia">
+                  <h3 class="team_name">Shamim Mia</h3>
+                  <p class="team_role">Sr. Web Developer</p>
+                </article>
+                <article class="team_member"><img class="team_photo" src="./assets/images/team-4.jpg" alt="John Doe">
+                  <h3 class="team_name">John Doe</h3>
+                  <p class="team_role">Front-end Developer</p>
+                </article>
+          </div>
         </div>
-        <section class="dark aic" id="btns"><a class="btn" href="#">get started</a><a class="btn" href="#">explore features</a></section>
+      </section>
+      <section class="section" id="works">
+        <div class="wrapper">
+          <div class="section_head">
+            <h2 class="section_title">Latest works</h2>
+          </div>
+          <ul class="filter">
+            <li><a class="active" href="#works">All</a></li>
+            <li><a href="#works">Branding</a></li>
+            <li><a href="#works">Design</a></li>
+            <li><a href="#works">Development</a></li>
+            <li><a href="#works">Strategy</a></li>
+          </ul>
+          <div class="works"><a class="work" href="#"><img src="./assets/images/work-1.jpg" alt="Hair Dresser">
+                  <div class="work_hover">
+                    <h3 class="work_title">Hair Dresser</h3>
+                    <p class="work_cat">Branding</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-2.jpg" alt="Peace Dove">
+                  <div class="work_hover">
+                    <h3 class="work_title">Peace Dove</h3>
+                    <p class="work_cat">Design</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-3.jpg" alt="Workspace">
+                  <div class="work_hover">
+                    <h3 class="work_title">Workspace</h3>
+                    <p class="work_cat">Branding</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-4.jpg" alt="Camera">
+                  <div class="work_hover">
+                    <h3 class="work_title">Camera</h3>
+                    <p class="work_cat">Development</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-5.jpg" alt="Bicycle">
+                  <div class="work_hover">
+                    <h3 class="work_title">Bicycle</h3>
+                    <p class="work_cat">Design</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-6.jpg" alt="Notebook">
+                  <div class="work_hover">
+                    <h3 class="work_title">Notebook</h3>
+                    <p class="work_cat">Strategy</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-7.jpg" alt="Green Desk">
+                  <div class="work_hover">
+                    <h3 class="work_title">Green Desk</h3>
+                    <p class="work_cat">Branding</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-8.jpg" alt="Paper Colors">
+                  <div class="work_hover">
+                    <h3 class="work_title">Paper Colors</h3>
+                    <p class="work_cat">Design</p><span class="work_view">View &rsaquo;</span>
+                  </div></a><a class="work" href="#"><img src="./assets/images/work-9.jpg" alt="Events">
+                  <div class="work_hover">
+                    <h3 class="work_title">Events</h3>
+                    <p class="work_cat">Strategy</p><span class="work_view">View &rsaquo;</span>
+                  </div></a>
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="wrapper">
+          <p class="cta_text">Do you like OUR WORK so far?<br>Let's talk about YOUR PROJECT!</p><a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </section>
+      <section class="section" id="blog">
+        <div class="wrapper">
+          <div class="section_head">
+            <h2 class="section_title">Recent blog posts</h2>
+            <p class="section_subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+          </div>
+              <article class="post"><img class="post_img" src="./assets/images/blog-1.jpg" alt="Startup ideas needs to be funded">
+                <div>
+                  <div class="post_head">
+                    <div class="post_date"><b>18</b><span>Oct</span></div>
+                    <div>
+                      <h3 class="post_title"><a href="#">Startup ideas needs to be funded</a></h3>
+                      <p class="post_meta">By <a href="#">Khalil Uddin</a> in <a href="#">Development</a></p>
+                    </div>
+                  </div>
+                  <p class="post_text">Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tedundlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquayam erat, sed diam</p><a class="post_more" href="#">Read more</a>
+                </div>
+              </article>
+              <article class="post"><img class="post_img" src="./assets/images/blog-2.jpg" alt="User interface designing elements">
+                <div>
+                  <div class="post_head">
+                    <div class="post_date"><b>18</b><span>Oct</span></div>
+                    <div>
+                      <h3 class="post_title"><a href="#">User interface designing elements</a></h3>
+                      <p class="post_meta">By <a href="#">Khalil Uddin</a> in <a href="#">Development</a></p>
+                    </div>
+                  </div>
+                  <p class="post_text">Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tedundlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquayam erat, sed diam</p><a class="post_more" href="#">Read more</a>
+                </div>
+              </article>
+        </div>
+      </section>
+      <section class="section section_gray" id="clients">
+        <div class="wrapper">
+          <div class="clients"><img src="data:image/png;base64,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tFlydbNJmmllk1y13f2A1HCZY2xL2mTsL98vcFI2W76awH45TpBqTg7K1wsrg95rb+MEx2Waitk2SHrJY7FL3yhSRWTL52wfFMMMpUkKFVwFooy0nN0nAe5T8Jrsk3stZ4RKStQMXpRmKU06E2M4EfZQZVvz1TKXKaqCKxrUDnqvjbKIQ3RRYEudRRdbZac0ids1XY6yfNq5IFPpo15G2za2u5gBwCyitquCHOG01EqYAovy4XSzQWYkrbD6mc/b7JQ4/ruv/wNqOxjNLN6ULFvqOCGKKSY3zUaU00sHFVzlpGN3QSVyu1W+g/3s4gHbiBpgL1/kI8ce2Xi1XAXZKIPzOdOKhhlCC5NVNjts66EY2cxRX1DDXa6Iu+yulqh6milSikbHSymU2J486Kh+nFksU6WctyVsYzJzVNi28yY0SDbz1Vj+NfgaBl9tnDhwt4phXYyE6GS3HJEauSjOa5xqs4gQAQL0Ja3m+5mtLvFvqZEWZtukx2gH7mCHbagIUghUqhbLF1rFKbbKUWny2H++OcxqTBtmyaANo1YbRq02jFptGLXaMGq1YdRqw6jVhlGrDaNWG0atNoxabRi12jBqtWHUasOo1YZRqw2jVhtGrTaMWm0YtdowarVh1GrDqNWGUasNo1YbRq02jFptGLXaMGq18R897ZVLXzIoSgAAACl0RVh0ZGM6Zm9ybWF0AGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3DkrZ9UAAAAOHRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAoYykgMTk5OCBIZXdsZXR0LVBhY2thcmQgQ29tcGFueflXeTcAAAAhdEVYdGljYzpkZXNjcmlwdGlvbgBzUkdCIElFQzYxOTY2LTIuMVet2kcAAAAmdEVYdGljYzptYW51ZmFjdHVyZXIASUVDIGh0dHA6Ly93d3cuaWVjLmNoHH8ATAAAADd0RVh0aWNjOm1vZGVsAElFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQkRTSKkAAAAVdEVYdHBob3Rvc2hvcDpDb2xvck1vZGUAM1YCs0AAAAAmdEVYdHBob3Rvc2hvcDpJQ0NQcm9maWxlAHNSR0IgSUVDNjE5NjYtMi4xHC9sCwAAACh0RVh0eG1wOkNyZWF0ZURhdGUAMjAxMi0wNi0yMFQyMjowNDoxNS0wNTowMCM8KkQAAAAxdEVYdHhtcDpDcmVhdG9yVG9vbABBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoV2luZG93cynzxfrpAAAAKnRFWHR4bXA6TWV0YWRhdGFEYXRlADIwMTYtMTItMjdUMTE6MTQ6MzgrMDI6MDDuaDPeAAAAKHRFWHR4bXA6TW9kaWZ5RGF0ZQAyMDE2LTEyLTI3VDExOjE0OjM4KzAyOjAw0sxgYAAAADl0RVh0eG1wTU06RG9jdW1lbnRJRAB4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4REJCOEY3MTFDMjRGRkFCCODxEAAAAD10RVh0eG1wTU06SW5zdGFuY2VJRAB4bXAuaWlkOmZjZDFjMzZlLWEyZTUtMTU0Ni1hMWRjLTFhNGMzZmRiNDg2YeHv8bYAAABBdEVYdHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRAB4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4REJCOEY3MTFDMjRGRkFCoRrT0AAAAABJRU5ErkJggg==" alt="client logo"><img src="data:image/png;base64,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vwyJPc70a1HLbeBwEr6fJEu7EXU+rOVJWvSJwvyr0KcLlrzmicaowyj6QxwHOQxPVzKoqLwOzuwUdWtKg5rvLnGaCTuAW2no4q1EWaP/ulpxVoTdS1cl+0KqKpMBLF/U4xhnRFhlqhFdgmPLj4vTO9yJsyGsNa8/VuQKtiZoff0TP2dDWHe2TJv48C9zd/ob7ak4H8IATD2leDP5+mD/NTodrXt71EjpijtvcaLsBX+d+Vj456gulhPz14qpOBuVHB5wfxu6zkjCavnTlQXT3nmy18XZEAb2j4iXb1pWOivCfgXOxob9KsyERWImLBIzYZGYCYvETFgkZsIiMRMWiZmwSMyERWImLBIzYZGYCYvETFgkZsIiMRMWiZmwSMyERWImLBL/AwDz1wIjp5q4AAAAKXRFWHRkYzpmb3JtYXQAYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcOStn1QAAAA4dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQtUGFja2FyZCBDb21wYW55+Vd5NwAAACF0RVh0aWNjOmRlc2NyaXB0aW9uAHNSR0IgSUVDNjE5NjYtMi4xV63aRwAAACZ0RVh0aWNjOm1hbnVmYWN0dXJlcgBJRUMgaHR0cDovL3d3dy5pZWMuY2gcfwBMAAAAN3RFWHRpY2M6bW9kZWwASUVDIDYxOTY2LTIuMSBEZWZhdWx0IFJHQiBjb2xvdXIgc3BhY2UgLSBzUkdCRFNIqQAAABV0RVh0cGhvdG9zaG9wOkNvbG9yTW9kZQAzVgKzQAAAACZ0RVh0cGhvdG9zaG9wOklDQ1Byb2ZpbGUAc1JHQiBJRUM2MTk2Ni0yLjEcL2wLAAAAKHRFWHR4bXA6Q3JlYXRlRGF0ZQAyMDEyLTA2LTIwVDIyOjA0OjE1LTA1OjAwIzwqRAAAADF0RVh0eG1wOkNyZWF0b3JUb29sAEFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKfPF+ukAAAAqdEVYdHhtcDpNZXRhZGF0YURhdGUAMjAxNi0xMi0yN1QxMToxNDozOCswMjowMO5oM94AAAAodEVYdHhtcDpNb2RpZnlEYXRlADIwMTYtMTItMjdUMTE6MTQ6MzgrMDI6MDDSzGBgAAAAOXRFWHR4bXBNTTpEb2N1bWVudElEAHhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMThEQkI4RjcxMUMyNEZGQUII4PEQAAAAPXRFWHR4bXBNTTpJbnN0YW5jZUlEAHhtcC5paWQ6ZmNkMWMzNmUtYTJlNS0xNTQ2LWExZGMtMWE0YzNmZGI0ODZh4e/xtgAAAEF0RVh0eG1wTU06T3JpZ2luYWxEb2N1bWVudElEAHhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMThEQkI4RjcxMUMyNEZGQUKhGtPQAAAAAElFTkSuQmCC" alt="client logo"><img src="data:image/png;base64,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lpuQLDchWW5CstyEZLkJyXITkuUmJMtNSJabkCw3IVluQrLchGS5CclyE5LlJiTLTUiWm5AsNyFZbkKy3IT8F6vO6JkqeFLnAAAAKXRFWHRkYzpmb3JtYXQAYXBwbGljYXRpb24vdm5kLmFkb2JlLnBob3Rvc2hvcOStn1QAAAA4dEVYdGljYzpjb3B5cmlnaHQAQ29weXJpZ2h0IChjKSAxOTk4IEhld2xldHQtUGFja2FyZCBDb21wYW55+Vd5NwAAACF0RVh0aWNjOmRlc2NyaXB0aW9uAHNSR0IgSUVDNjE5NjYtMi4xV63aRwAAACZ0RVh0aWNjOm1hbnVmYWN0dXJlcgBJRUMgaHR0cDovL3d3dy5pZWMuY2gcfwBMAAAAN3RFWHRpY2M6bW9kZWwASUVDIDYxOTY2LTIuMSBEZWZhdWx0IFJHQiBjb2xvdXIgc3BhY2UgLSBzUkdCRFNIqQAAABV0RVh0cGhvdG9zaG9wOkNvbG9yTW9kZQAzVgKzQAAAACZ0RVh0cGhvdG9zaG9wOklDQ1Byb2ZpbGUAc1JHQiBJRUM2MTk2Ni0yLjEcL2wLAAAAKHRFWHR4bXA6Q3JlYXRlRGF0ZQAyMDEyLTA2LTIwVDIyOjA0OjE1LTA1OjAwIzwqRAAAADF0RVh0eG1wOkNyZWF0b3JUb29sAEFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChXaW5kb3dzKfPF+ukAAAAqdEVYdHhtcDpNZXRhZGF0YURhdGUAMjAxNi0xMi0yN1QxMToxNDozOCswMjowMO5oM94AAAAodEVYdHhtcDpNb2RpZnlEYXRlADIwMTYtMTItMjdUMTE6MTQ6MzgrMDI6MDDSzGBgAAAAOXRFWHR4bXBNTTpEb2N1bWVudElEAHhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMThEQkI4RjcxMUMyNEZGQUII4PEQAAAAPXRFWHR4bXBNTTpJbnN0YW5jZUlEAHhtcC5paWQ6ZmNkMWMzNmUtYTJlNS0xNTQ2LWExZGMtMWE0YzNmZGI0ODZh4e/xtgAAAEF0RVh0eG1wTU06T3JpZ2luYWxEb2N1bWVudElEAHhtcC5kaWQ6MDE4MDExNzQwNzIwNjgxMThEQkI4RjcxMUMyNEZGQUKhGtPQAAAAAElFTkSuQmCC" alt="client logo"><img src="data:image/png;base64,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4MU48GIceDEOvBgHPwFG1dOaUj7s1AAAACl0RVh0ZGM6Zm9ybWF0AGFwcGxpY2F0aW9uL3ZuZC5hZG9iZS5waG90b3Nob3DkrZ9UAAAAOHRFWHRpY2M6Y29weXJpZ2h0AENvcHlyaWdodCAoYykgMTk5OCBIZXdsZXR0LVBhY2thcmQgQ29tcGFueflXeTcAAAAhdEVYdGljYzpkZXNjcmlwdGlvbgBzUkdCIElFQzYxOTY2LTIuMVet2kcAAAAmdEVYdGljYzptYW51ZmFjdHVyZXIASUVDIGh0dHA6Ly93d3cuaWVjLmNoHH8ATAAAADd0RVh0aWNjOm1vZGVsAElFQyA2MTk2Ni0yLjEgRGVmYXVsdCBSR0IgY29sb3VyIHNwYWNlIC0gc1JHQkRTSKkAAAAVdEVYdHBob3Rvc2hvcDpDb2xvck1vZGUAM1YCs0AAAAAmdEVYdHBob3Rvc2hvcDpJQ0NQcm9maWxlAHNSR0IgSUVDNjE5NjYtMi4xHC9sCwAAACh0RVh0eG1wOkNyZWF0ZURhdGUAMjAxMi0wNi0yMFQyMjowNDoxNS0wNTowMCM8KkQAAAAxdEVYdHhtcDpDcmVhdG9yVG9vbABBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoV2luZG93cynzxfrpAAAAKnRFWHR4bXA6TWV0YWRhdGFEYXRlADIwMTYtMTItMjdUMTE6MTQ6MzgrMDI6MDDuaDPeAAAAKHRFWHR4bXA6TW9kaWZ5RGF0ZQAyMDE2LTEyLTI3VDExOjE0OjM4KzAyOjAw0sxgYAAAADl0RVh0eG1wTU06RG9jdW1lbnRJRAB4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4REJCOEY3MTFDMjRGRkFCCODxEAAAAD10RVh0eG1wTU06SW5zdGFuY2VJRAB4bXAuaWlkOmZjZDFjMzZlLWEyZTUtMTU0Ni1hMWRjLTFhNGMzZmRiNDg2YeHv8bYAAABBdEVYdHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRAB4bXAuZGlkOjAxODAxMTc0MDcyMDY4MTE4REJCOEY3MTFDMjRGRkFCoRrT0AAAAABJRU5ErkJggg==" alt="client logo"><img src="./assets/images/client-5.png" alt="client logo">
+          </div>
+          <div class="quote">
+            <blockquote class="quote_text">Hvaing placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum"</blockquote>
+            <p class="quote_author">John Doe, Google Inc.</p>
+          </div>
+          <div class="dots"><span class="active"></span><span></span><span></span></div>
+        </div>
+      </section>
+      <section class="section" id="contact">
+        <div class="wrapper">
+          <div class="section_head">
+            <h2 class="section_title">Get in touch</h2>
+            <p class="section_subtitle">Lorem ipsum dolor sit amet, consetetur sadipscing elitr amet</p>
+          </div>
+          <div class="contact">
+            <ul class="contact_info">
+              <li><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                <div>
+                  <h4>Address</h4>
+                  <p>312, 7th Ave, New York</p>
+                  <p>NY 101200, United States of America</p>
+                </div>
+              </li>
+              <li><svg viewBox="0 0 24 24"><path fill-rule="evenodd" d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm4 17.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM8 5v11h8V5z"/></svg>
+                <div>
+                  <h4>Hotline (24x7)</h4>
+                  <p>+65 0052 300, +65 88251 210</p>
+                  <p>+88 01723 511 340</p>
+                </div>
+              </li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>
+                <div>
+                  <h4>E-mail</h4>
+                  <p>shapedtheme@gmail.com</p>
+                  <p>khalilkode@gmail.com</p>
+                </div>
+              </li>
+            </ul>
+            <form class="form" action="#">
+              <input type="text" placeholder="Your name">
+              <input type="email" placeholder="Your e-mail">
+              <input type="text" placeholder="Your subject">
+              <input type="text" placeholder="Company name">
+              <textarea class="form_wide" placeholder="Write your message"></textarea>
+              <div class="form_bottom">
+                <button class="btn btn_dark" type="submit">Send message</button>
+                <p class="form_note"><span>*</span> We'll contact you as as possible. We don't reply on Monday.</p>
+              </div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
-    <footer class="wrapper">
-      <div class="dark footer_wrapper mobile_gap">
-            <button class="burger" type="button" aria-label="Toggle menu">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-            <div class="navigation">
-              <div class="logo"><a href="index.html"><img src="./assets/images/Symbol.svg" alt="logomisocial"><span class="nazva">misocial</span></a></div>
-              <div class="lopata">
-                <div class="x">
-                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="30" height="30">
-<path fill="rgb(255, 255, 255)" d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"/>
-</svg>
-                </div>
-                <nav>
-                  <ul class="menu">
-                    <li><a href="index.html">Home </a></li>
-                    <li><a href="#">Why MISOCIAL </a></li>
-                    <li><a href="#">Features </a></li>
-                    <li><a href="#">Articles </a></li>
-                    <li><a href="#">Pricing </a></li>
-                  </ul>
-                </nav><a class="btn" href="#">get started</a>
-              </div>
-            </div>
-      </div>
-      <div class="driver"></div>
-      <div class="socials_flex">
-        <div>
-          <p class="footer_p">2017 Mass Impressions Tranmautritam. Make the right impression.</p>
+    <footer>
+      <div class="wrapper">
+        <div class="footer_socials"><a href="#" aria-label="Twitter"><svg viewBox="0 0 640 640"><path d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 640 640"><path d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 640 640"><path d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg></a><a href="#" aria-label="Twitter"><svg viewBox="0 0 640 640"><path d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg></a>
         </div>
-        <div class="socials"><a href="#">
-             <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#6a6a77" d="M240 363.3L240 576L356 576L356 363.3L442.5 363.3L460.5 265.5L356 265.5L356 230.9C356 179.2 376.3 159.4 428.7 159.4C445 159.4 458.1 159.8 465.7 160.6L465.7 71.9C451.4 68 416.4 64 396.2 64C289.3 64 240 114.5 240 223.4L240 265.5L174 265.5L174 363.3L240 363.3z"/></svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#6a6a77" d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#6a6a77" d="M386.3 292.5C388.1 302.2 389.4 311.9 389.4 324.5C389.4 434.3 315.8 512 205 512C98.9 512 13 426.1 13 320C13 213.9 98.9 128 205 128C256.9 128 300.1 146.9 333.6 178.3L281.5 228.3C267.4 214.7 242.5 198.7 205 198.7C139.5 198.7 86.1 252.9 86.1 320C86.1 387.1 139.5 441.3 205 441.3C281 441.3 309.5 386.6 314 358.5L205 358.5L205 292.5L386.3 292.5L386.3 292.5zM571.7 298.9L571.7 243.2L515.7 243.2L515.7 298.9L460 298.9L460 354.9L515.7 354.9L515.7 410.6L571.7 410.6L571.7 354.9L627.4 354.9L627.4 298.9L571.7 298.9z"/></svg></a><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640"><!--!Font Awesome Free v7.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path fill="#6a6a77" d="M320.3 205C256.8 204.8 205.2 256.2 205 319.7C204.8 383.2 256.2 434.8 319.7 435C383.2 435.2 434.8 383.8 435 320.3C435.2 256.8 383.8 205.2 320.3 205zM319.7 245.4C360.9 245.2 394.4 278.5 394.6 319.7C394.8 360.9 361.5 394.4 320.3 394.6C279.1 394.8 245.6 361.5 245.4 320.3C245.2 279.1 278.5 245.6 319.7 245.4zM413.1 200.3C413.1 185.5 425.1 173.5 439.9 173.5C454.7 173.5 466.7 185.5 466.7 200.3C466.7 215.1 454.7 227.1 439.9 227.1C425.1 227.1 413.1 215.1 413.1 200.3zM542.8 227.5C541.1 191.6 532.9 159.8 506.6 133.6C480.4 107.4 448.6 99.2 412.7 97.4C375.7 95.3 264.8 95.3 227.8 97.4C192 99.1 160.2 107.3 133.9 133.5C107.6 159.7 99.5 191.5 97.7 227.4C95.6 264.4 95.6 375.3 97.7 412.3C99.4 448.2 107.6 480 133.9 506.2C160.2 532.4 191.9 540.6 227.8 542.4C264.8 544.5 375.7 544.5 412.7 542.4C448.6 540.7 480.4 532.5 506.6 506.2C532.8 480 541 448.2 542.8 412.3C544.9 375.3 544.9 264.5 542.8 227.5zM495 452C487.2 471.6 472.1 486.7 452.4 494.6C422.9 506.3 352.9 503.6 320.3 503.6C287.7 503.6 217.6 506.2 188.2 494.6C168.6 486.8 153.5 471.7 145.6 452C133.9 422.5 136.6 352.5 136.6 319.9C136.6 287.3 134 217.2 145.6 187.8C153.4 168.2 168.5 153.1 188.2 145.2C217.7 133.5 287.7 136.2 320.3 136.2C352.9 136.2 423 133.6 452.4 145.2C472 153 487.1 168.1 495 187.8C506.7 217.3 504 287.3 504 319.9C504 352.5 506.7 422.6 495 452z"/></svg>  </a></div>
+        <div class="footer_line"></div>
+        <p class="footer_p">© 2015 Startup, designed by Shapedtheme</p>
       </div>
     </footer>
   </body>

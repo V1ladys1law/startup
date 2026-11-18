@@ -1,102 +1,130 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
+import { dirname } from 'path'
+import { fileURLToPath } from 'url'
 import { mkdirSync } from 'fs'
+
 import tailwindcss from '@tailwindcss/vite'
 import pugPlugin from '@macropygia/vite-plugin-pug-static'
 import { viteStaticCopy } from 'vite-plugin-static-copy'
 
+const projectRoot = dirname(fileURLToPath(import.meta.url))
+const srcDir = resolve(projectRoot, 'src')
+
 const createStructure = () => ({
-  name: 'create-structure',
-  buildStart() {
-    const dirs = [
-      'src/components',
-      'src/scripts',
-      'src/data',
-      'src/styles/components',
-      'src/assets/images',
-      'src/assets/fonts',
-      'src/assets/icons',
-    ]
-    dirs.forEach(dir => mkdirSync(dir, { recursive: true }))
-  },
-  writeBundle() {
-    const outDirs = [
-      'docs/assets/images',
-      'docs/assets/fonts',
-      'docs/assets/icons',
-      'docs/assets/js',
-    ]
-    outDirs.forEach(dir => mkdirSync(dir, { recursive: true }))
-  }
+    name: 'create-structure',
+
+    buildStart() {
+        const dirs = [
+            'components',
+            'scripts',
+            'data',
+            'styles/components',
+            'assets/images',
+            'assets/fonts',
+            'assets/icons',
+        ]
+
+        dirs.forEach(dir => {
+            mkdirSync(resolve(srcDir, dir), { recursive: true })
+        })
+    },
+
+    writeBundle() {
+        const docsDir = resolve(projectRoot, 'docs')
+
+        const dirs = [
+            'assets/images',
+            'assets/fonts',
+            'assets/icons',
+            'assets/js',
+        ]
+
+        dirs.forEach(dir => {
+            mkdirSync(resolve(docsDir, dir), { recursive: true })
+        })
+    },
 })
 
 export default defineConfig({
-  root: 'src',
-  base: './',
+    root: srcDir,
+    base: './',
 
-  plugins: [
-    createStructure(),
-    tailwindcss(),
-    viteStaticCopy({
-      targets: [
-        { src: 'assets/images/*', dest: 'assets/images' },
-      ],
-    }),
-    pugPlugin({
-      buildLocals: {
-        siteName: 'site name',
-        currentYear: new Date().getFullYear(),
-      },
-      buildOptions: {
-        basedir: resolve(process.cwd(), 'src'),
-        pretty: true,
-      },
-    }),
-  ],
+    plugins: [
+        createStructure(),
 
-  resolve: {
-    alias: {
-      '@': resolve(process.cwd(), 'src'),
-      '@components': resolve(process.cwd(), 'src/components'),
-      '@styles': resolve(process.cwd(), 'src/styles'),
-      '@assets': resolve(process.cwd(), 'src/assets'),
-      '@scripts': resolve(process.cwd(), 'src/scripts'),
-      '@fonts': resolve(process.cwd(), 'src/fonts'),
-    },
-  },
+        tailwindcss(),
 
-  build: {
-    outDir: '../docs',
-    emptyOutDir: true,
-    cssCodeSplit: false,
-    rollupOptions: {
-      input: {
-        main: resolve(__dirname, 'src/index.pug'),
-        app: resolve(__dirname, 'src/main.js'),
-      },
-      output: {
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
-            return 'assets/styles.css'
-          }
-          if (assetInfo.name && /\.(woff2?|ttf|otf|eot)$/.test(assetInfo.name)) {
-            return 'assets/fonts/[name][extname]'
-          }
-          if (assetInfo.name && /\.(png|jpe?g|gif|svg|webp)$/.test(assetInfo.name)) {
-            return 'assets/images/[name][extname]'
-          }
-          return 'assets/[name][extname]'
+        viteStaticCopy({
+            targets: [
+                {
+                    src: 'assets/images/*',
+                    dest: 'assets/images',
+                },
+            ],
+        }),
+
+        pugPlugin({
+            buildLocals: {
+                siteName: 'site name',
+                currentYear: new Date().getFullYear(),
+            },
+
+            buildOptions: {
+                basedir: srcDir,
+                pretty: true,
+            },
+        }),
+    ],
+
+    resolve: {
+        alias: {
+            '@': srcDir,
+            '@components': resolve(srcDir, 'components'),
+            '@styles': resolve(srcDir, 'styles'),
+            '@assets': resolve(srcDir, 'assets'),
+            '@scripts': resolve(srcDir, 'scripts'),
+            '@fonts': resolve(srcDir, 'assets/fonts'),
         },
-        chunkFileNames: 'assets/js/[name].js',
-        entryFileNames: 'assets/js/[name].js',
-      },
     },
-  },
 
-  server: {
-    port: 3000,
-    host: true,
-    open: true,
-  },
+    build: {
+        outDir: resolve(projectRoot, 'docs'),
+        emptyOutDir: true,
+        cssCodeSplit: false,
 
+        rollupOptions: {
+            input: {
+                main: resolve(srcDir, 'index.pug'),
+                app: resolve(srcDir, 'main.js'),
+            },
+
+            output: {
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name?.endsWith('.css')) {
+                        return 'assets/styles.css'
+                    }
+
+                    if (assetInfo.name && /\.(woff2?|ttf|otf|eot)$/.test(assetInfo.name)) {
+                        return 'assets/fonts/[name][extname]'
+                    }
+
+                    if (assetInfo.name && /\.(png|jpe?g|gif|svg|webp)$/.test(assetInfo.name)) {
+                        return 'assets/images/[name][extname]'
+                    }
+
+                    return 'assets/[name][extname]'
+                },
+
+                chunkFileNames: 'assets/js/[name].js',
+                entryFileNames: 'assets/js/[name].js',
+            },
+        },
+    },
+
+    server: {
+        port: 3000,
+        host: true,
+        open: true,
+    },
 })

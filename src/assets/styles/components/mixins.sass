@@ -1,42 +1,38 @@
+$red: #c0301c
+$dark: #444
+$text: #555
+$light: #f8f8f8
+$line: #ddd
+
 =media($size)
     @media screen and (min-width: #{$size}px)
         @content
 
-=gradient($url)
-    background: linear-gradient(-60deg, #87d3cdc9 0%, #5d33dbd7 100%),url(#{$url}) no-repeat center/cover
+=overlay($url, $color: rgba(192, 48, 28, .7))
+    background: linear-gradient($color, $color), url(#{$url}) no-repeat center/cover
 
-=btn($fixed: true, $empty: false)
+=btn($theme: light)
     display: inline-block
-    padding: 17px 0
+    padding: 15px 30px
+    font-family: "Montserrat", sans-serif
     font-size: 12px
+    font-weight: 500
     letter-spacing: 1px
     text-transform: uppercase
-    color: #c2c9db
-    font-weight: bold
     text-align: center
-    border-radius: 25px
-    transition: .5s
-    @if $fixed
-        width: 190px
-        box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
-        background-color: #fff
-        border: 1px solid #d7dbe8
+    background-color: transparent
+    cursor: pointer
+    transition: .3s
+    @if $theme == dark
+        color: $dark
+        border: 1px solid $dark
         &:hover
-            border-color: transparent
             color: #fff
-            background-color: #6e45e2
+            background-color: $red
+            border-color: $red
     @else
-        width: 150px
-        color: #d7dbe8
-        background-color: transparent
+        color: #fff
         border: 1px solid #fff
         &:hover
-            color: #6e45e2
-            border-color: #6e45e2
-    @if $empty != false 
-        border: 1px solid #6e45e2
-        background-color: #6e45e2
-        color: #d7dbe8
-        transition: .5s
-        &:hover
-            color: #000
+            color: $red
+            background-color: #fff

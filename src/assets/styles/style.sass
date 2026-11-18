@@ -13,46 +13,78 @@ html
     scroll-behavior: smooth
 
 body
-    background-color: #f9fafc
-    font-family: "Maven Pro"
+    background-color: #fff
+    font-family: "Roboto Slab", serif
+    font-size: 14px
+    line-height: 1.7
+    color: $text
 
-.mobile_gap
-    display: flex
-    justify-content: right
+a
+    text-decoration: none
+    color: inherit
 
-.logo_mobile
-    @media screen and (min-width: 1250px)
-        display: none
+li
+    list-style: none
+
+img
+    display: block
+    max-width: 100%
+
+button,
+input,
+textarea
+    font-family: inherit
+
+.wrapper
+    margin: 0 auto
+    max-width: 1174px
+    width: 100%
+    padding: 0 15px
 
 .menu_flex
     display: flex
     justify-content: space-between
     align-items: center
 
+.header_wrapper
+    position: relative
+    padding-top: 25px
+    padding-bottom: 25px
+    color: #fff
+
+    +media(1250)
+        padding-top: 40px
+        padding-bottom: 40px
+
+.logo a
+    display: flex
+    align-items: center
+
+.nazva
+    font-family: "Montserrat", sans-serif
+    font-size: 24px
+    font-weight: 700
+    color: #fff
+
 .x
-    content: ""
     min-width: 30px
     min-height: 30px
     display: block
     position: absolute
     top: 30px
     left: 15px
-    @media screen and (min-width: 1250px)
+    background: none
+    border: none
+    color: #fff
+    cursor: pointer
+
+    svg
+        width: 30px
+        height: 30px
+        display: block
+
+    +media(1250)
         display: none
-
-a
-    text-decoration: none
-
-.header_wrapper,
-.footer_wrapper
-    content: ""
-    position: relative
-    display: flex
-    align-items: center
-    width: 100%
-    max-width: 100%
-    @media screen and (min-width: 1250px)
-        justify-content: space-between
 
 .burger
     display: block
@@ -60,10 +92,10 @@ a
     background: none
     border: none
     z-index: 2
-    width: 24px
-    height: 24px
+    width: 28px
+    height: 28px
     padding: 0
-    color: inherit
+    color: #fff
     flex-shrink: 0
 
     svg
@@ -76,30 +108,23 @@ a
 
 .navigation
     display: flex
-    justify-content: space-between
     align-items: center
-    width: 100%
-    padding: 64px 0 95px
 
-    @media screen and (max-width: 1250px)
-        content: ""
+    @media screen and (max-width: 1249px)
         position: fixed
         top: 0
         right: -100%
         width: 280px
         height: 100vh
-        background: #1d153a
+        background: $red
         z-index: 1003
         transition: .35s
         padding: 80px 30px 40px
         flex-direction: column
-        justify-content: flex-start
-        gap: 40px
+        align-items: flex-start
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3)
 
         .lopata
-            flex-direction: column
-            gap: 30px
             width: 100%
 
             nav
@@ -107,14 +132,13 @@ a
 
             .menu
                 flex-direction: column
-                gap: 25px
                 align-items: flex-start
+                gap: 25px
 
                 li
                     width: 100%
 
                     a
-                        color: #fff !important
                         font-size: 18px
                         display: block
                         width: 100%
@@ -123,7 +147,6 @@ a
             right: 0
 
 .overlay
-    content: ""
     position: fixed
     inset: 0
     background: rgba(0, 0, 0, 0.6)
@@ -136,64 +159,18 @@ a
         opacity: 1
         visibility: visible
 
-.wrapper
-    margin: 0 auto
-    max-width: 1822px
-    width: 100%
-    padding: 25px 15px 0
-    @media screen and (min-width: 1024px)
-        margin: 0 auto
-        max-width: 1822px
-        width: 100%
-        padding: 0px 15px 0
-
-li
-    list-style: none
-
-header
-    +gradient('../assets/images/glass.png')
-    width: 100%
-
-.logo a
-    display: flex
-    align-items: center
-    gap: 17px
-
-.nazva
-    font-size: 30px
-    text-transform: uppercase
-    letter-spacing: 6px
-    color: #fff
-    font-weight: bold
-
-.menu li
-    font-size: 16px
-    color: #fff
-    font-weight: 400
-
 .menu
     display: flex
     align-items: center
-    gap: 60px
-
-.lopata
-    display: flex
-    align-items: center
-    gap: 60px
-
-.cards
-    padding: 0 0 120px
-    max-width: 1420px
-    width: 100%
-
-.icon svg
-    max-width: 24px
-    max-height: 24px
+    gap: 28px
 
 .menu li a
     position: relative
     display: inline-block
-    text-decoration: none
+    font-family: "Montserrat", sans-serif
+    font-size: 13px
+    font-weight: 500
+    color: #fff
     transition: color .3s
 
     &::before
@@ -210,400 +187,530 @@ header
         &::before
             width: 100%
 
-.light
-    color: #fff
-    .burger
-        color: #fff
-    .lopata
-        a
-            color: #fff
-        li a
-            position: relative
-            display: inline-block
-
-            &::before
-                content: ""
-                position: absolute
-                bottom: -5px
-                left: 0
-                width: 0
-                height: 2px
-                background-color: #fff
-                transition: width .3s ease-in-out
-
-            &:hover
-                &::before
-                    width: 100%
-    a
-        color: #fff
-    .btn
-        +btn($fixed: false, $empty: false)
-
-.dark
-    color: #000
-    .navigation
-        padding: 66px 0 30px 0
-    .burger
-        color: #000
-    .nazva
-        color: #fff
-        @media screen and (min-width: 1250px)
-            color: #000
-    a span
-            color: #000
-    .lopata li a
-        position: relative
-        display: inline-block
-        color: #000
-        transition: .3s
-
-        &::before
-            content: ""
-            position: absolute
-            bottom: -5px
-            left: 0
-            width: 0
-            height: 2px
-            background-color: currentColor
-            transition: width .3s ease-in-out
-
-        &:hover
-            color: #756edc
-            &::before
-                width: 100%
-
-    .btn
-        +btn($fixed: true, $empty: false)
-
-footer
-    padding-bottom: 30px
+header
+    +overlay('../images/hero.jpg', rgba(120, 20, 10, .35))
+    display: flex
+    flex-direction: column
     width: 100%
-    .dark
-        .btn
-            +btn($fixed: false, $empty: true)
+    min-height: 520px
 
-.main_conteiner
-    padding: 100px 0 180px
+    +media(1024)
+        min-height: 770px
+
+.hero
+    flex: 1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     text-align: center
+    padding-top: 50px
+    padding-bottom: 80px
+    color: #fff
+
+.hero_title
+    font-family: "Montserrat", sans-serif
+    font-size: 30px
+    font-weight: 500
+    text-transform: uppercase
+    margin-bottom: 15px
+
+    +media(768)
+        font-size: 50px
+
+.hero_text
+    font-size: 16px
+    margin-bottom: 35px
+
+    +media(768)
+        font-size: 20px
+
+.btn
+    +btn
+
+.btn_dark
+    +btn(dark)
+
+.section
+    padding: 60px 0
     width: 100%
 
-.header_flex
-    display: flex
-    flex-direction: column
-    align-items: center
-    width: 100%
+    +media(1024)
+        padding: 90px 0
 
-.grid
-    display: grid
-    width: 100%
+.section_gray
+    background-color: $light
 
-.socials_flex
-    padding: 33px 0 26px
-    display: flex
-    justify-content: space-between
-    align-items: center
-    @media screen and (max-width: 1024px)
-        flex-direction: column
-        gap: 25px
+.section_head
+    text-align: center
+    margin-bottom: 40px
 
-.jcsb
-    display: flex
-    align-items: center
-    justify-content: space-between
-    flex-wrap: wrap
-    gap: 20px
-    padding: 20px 0
-    width: 100%
+    +media(768)
+        margin-bottom: 60px
 
-    @media screen and (max-width: 1024px)
-        flex-direction: column
-        text-align: center
-        justify-content: center
+.section_title
+    font-family: "Montserrat", sans-serif
+    font-size: 20px
+    font-weight: 500
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $dark
 
-.gap
-    display: block
-    width: 100%
-    +media(1440)
-        display: flex
-        gap: 50px
+    &::after
+        content: ""
+        display: block
+        width: 50px
+        height: 2px
+        background-color: #333
+        margin: 20px auto 25px
 
-.aic
-    display: flex
-    flex-direction: column
-    align-items: center
-    width: 100%
-.col_3
+.section_subtitle
+    font-size: 16px
+    color: $dark
+
+.services
     display: grid
     grid-template-columns: 1fr
-    width: 100%
-    gap: 20px
-    justify-items: center
+    gap: 40px
 
-    @media screen and (min-width: 768px) and (max-width: 1024px)
-        grid-template-columns: repeat(2, 1fr)
-
-        .card:last-child
-            grid-column: span 2
-
-    @media screen and (min-width: 1024px)
-        align-items: center
+    +media(768)
         grid-template-columns: repeat(3, 1fr)
+        gap: 27px
 
-        .card:last-child
-            grid-column: auto
-
-.social_marketing
-    font-size: 14px
-    letter-spacing: 1px
-    padding: 40px
-    text-transform: uppercase
-    color: #ffffff
-    font-weight: 400
-
-    &::before,
-    &::after
-        margin: 0 15px 6px
-        content: ""
-        display: inline-block
-        width: 24px
-        height: 1px
-        background-color: #fff
-        flex-shrink: 0
-
-#misocial
-    &::before,
-    &::after
-        margin: 0 15px 6px
-        content: ""
-        display: inline-block
-        width: 24px
-        height: 1px
-        background-color: #6e45e2
-        flex-shrink: 0
-
-.pricing_table_p
-    font-size: 16px
-    color: #fff
-    font-weight: 400
+.service
     text-align: center
+    max-width: 363px
     width: 100%
+    margin: 0 auto
 
-.pricing_table
-    font-size: 86px
-    letter-spacing: -3px
-    color: #fff
-    font-weight: 400
-    text-align: center
-    margin-bottom: 22px
-    width: 100%
-    @media screen and (max-width: 768px)
-        font-size: 46px
-
-.pricing_text
-    padding: 120px 0 100px
-    width: 100%
-    #misocial
-        font-size: 14px
-        padding: 20px
-        text-transform: uppercase
-        letter-spacing: 1px
-        color: #9fa4af
-        font-weight: 400
-
-
-.select_a_plan
-    font-size: 60px
-    letter-spacing: -2px
-    color: #4f4f6f
-    font-weight: 400
-    margin-bottom: 38px
-    font-family: "Maven Pro"
-    text-align: center
-    @media screen and (max-width: 768px)
-        font-size: 36px
-
-.pricing_text p
-    letter-spacing: 2px
-    font-size: 16px
-    color: #9fa4af
-    font-family: "Maven Pro"
-    text-align: center
-
-.personal
-    font-size: 14px
-    letter-spacing: 1px
-    text-transform: uppercase
-    font-weight: bold
-    color: #9fa4af
-    text-align: center
-
-.currency
-    content: ""
-    position: absolute
-    top: 0
-    left: -15px
-
-.price
-    content: ""
-    position: relative
-    font-size: 16px
-    font-weight: bold
-    color: #4f4f6f
-    text-align: center
-
-.price b
-    font-size: 60px
-    font-weight: bold
-    color: #4f4f6f
-    text-align: center
-
-.footer_p
-    font-size: 14px
-    color: rgba(#6a6a77, .5)
-    font-weight: 400
-
-.card_img
-    padding: 50px
-    max-width: 100%
-    height: auto
-
-.card
-    width: 100%
-    max-width: 440px
-    border-radius: 30px
-    border: 1px solid #d7dbe8
-    margin-bottom: 15px
-    @media screen and (min-width: 1024px)
-        max-width: none
-        border-radius: 30px
-        background-color: #fff
-        transition: .5s
-
-        &:hover
-            box-shadow: 0 0 46px rgba(204,204,223,0.71)
-
-.socials
-    display: flex
-    align-items: center
-    gap: 15px
-
-    a
-        display: inline-flex
-        align-items: center
-        justify-content: center
-        transition: transform 0.3s ease
-
-        &:hover
-            transform: translateY(-2px)
-
-.card_btn
-    margin: 40px
-
-#socials
-    padding: 20px 0
-
-#btns
-    flex-direction: column
-    gap: 15px
-    width: 100%
-    +media(1024)
-        flex-direction: row
-        display: flex
-        gap: 10px
-        justify-content: center
-
-.driver
-    margin: 0
-    height: 1px
-    background-color: rgba(#bdbdc2, .2)
-    width: 100%
-
-.arrow
+.service_icon
     display: flex
     align-items: center
     justify-content: center
-    margin-bottom: 50px
-    min-width: 64px
-    min-height: 64px
-    background: #fff
-    border-radius: 32px
+    width: 90px
+    height: 90px
+    margin: 0 auto 25px
+    border: 1px solid $line
+    border-radius: 50%
     transition: .5s
+    color: $red
+
+    svg
+        width: 40px
+        height: 40px
+
     &:hover
-        transform: translateY(+7px)
+        background-color: $red
+        border-color: $red
+        color: #fff
 
-.description
-    padding: 40px 0
-    font-size: 16px
-    color: #9fa4af
-    font-weight: 400
+.service_title
+    font-family: "Montserrat", sans-serif
+    font-size: 14px
+    font-weight: 500
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $dark
+    margin-bottom: 15px
+
+.service_text
+    font-size: 14px
+
+.about_text
+    display: grid
+    grid-template-columns: 1fr
+    gap: 25px
+    margin-bottom: 50px
+
+    +media(768)
+        grid-template-columns: repeat(2, 1fr)
+        gap: 27px
+        margin-bottom: 70px
+
+.team
+    display: grid
+    grid-template-columns: 1fr
+    gap: 30px
+
+    +media(480)
+        grid-template-columns: repeat(2, 1fr)
+
+    +media(1024)
+        grid-template-columns: repeat(4, 1fr)
+
+.team_member
     text-align: center
+    max-width: 320px
     width: 100%
+    margin: 0 auto
 
-.main_get_started
-    padding: 120px 15px
-    +gradient('../assets/images/map.png')
+.team_photo
     width: 100%
+    aspect-ratio: 263 / 250
+    object-fit: cover
+    margin-bottom: 18px
 
-.lopata2
-    padding: 18px 0
-    width: 100%
-    p
+.team_name
+    font-family: "Montserrat", sans-serif
+    font-size: 12px
+    font-weight: 500
+    text-transform: uppercase
+    color: $dark
+    margin-bottom: 6px
+
+.team_role
+    font-size: 13px
+
+.filter
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 10px 22px
+    margin-bottom: 40px
+
+    a
         font-size: 14px
-        letter-spacing: 1px
-        font-weight: 400
-        text-transform: uppercase
-        color: #fff
-        text-align: center
-    h2
-        font-size: 60px
-        padding: 14px
-        letter-spacing: -2px
-        color: #fff
-        font-weight: 400
-        text-align: center
-        @media screen and (max-width: 768px)
-            font-size: 34px
+        color: $dark
+        transition: color .3s
 
-=media($size)
-    @media screen and (min-width: #{$size}px)
-        @content
+        &:hover
+            color: $red
 
-=gradient($url)
-    background: linear-gradient(-60deg, #87d3cdc9 0%, #5d33dbd7 100%), #6d45e1 url(#{$url}) no-repeat center/cover
+.works
+    display: grid
+    grid-template-columns: 1fr
+    gap: 20px
 
-=btn($fixed: true, $empty: false)
+    @media screen and (min-width: 560px)
+        grid-template-columns: repeat(2, 1fr)
+
+    +media(1024)
+        grid-template-columns: repeat(3, 1fr)
+        gap: 27px
+
+.work
+    position: relative
+    overflow: hidden
+    aspect-ratio: 363 / 323
+
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.work_hover
+    position: absolute
+    inset: 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: rgba(214, 90, 74, .92)
+    color: #fff
+    text-align: center
+    opacity: 0
+    transition: .3s
+
+    .work:hover &
+        opacity: 1
+
+.work_title
+    font-family: "Montserrat", sans-serif
+    font-size: 16px
+    font-weight: 500
+
+.work_cat
+    font-size: 12px
+    margin: 6px 0 20px
+
+.work_view
     display: inline-block
-    padding: 17px 0
+    padding: 10px 24px
+    font-family: "Montserrat", sans-serif
     font-size: 12px
     letter-spacing: 1px
     text-transform: uppercase
-    color: #c2c9db
-    font-weight: bold
+    background-color: #fff
+    color: $red
+
+.cta
+    +overlay('../images/cta.jpg', rgba(192, 48, 28, .75))
+    padding: 60px 0
     text-align: center
-    border-radius: 25px
+    color: #fff
+    width: 100%
+
+    +media(768)
+        padding: 80px 0
+
+.cta_text
+    font-size: 20px
+    line-height: 1.4
+    margin-bottom: 30px
+
+    +media(768)
+        font-size: 26px
+
+.post
+    display: grid
+    grid-template-columns: 1fr
+    gap: 25px
+    padding-bottom: 40px
+    margin-bottom: 40px
+    border-bottom: 1px solid $line
+
+    +media(768)
+        grid-template-columns: 40% 1fr
+        align-items: start
+
+    &:last-child
+        padding-bottom: 0
+        margin-bottom: 0
+        border-bottom: none
+
+.post_img
+    width: 100%
+    aspect-ratio: 288 / 202
+    object-fit: cover
+
+.post_head
+    display: flex
+    align-items: flex-start
+    gap: 18px
+    margin-bottom: 18px
+
+.post_date
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    width: 62px
+    height: 62px
+    border: 2px solid $text
+    font-family: "Montserrat", sans-serif
+    color: $text
+    line-height: 1.2
+
+    b
+        font-size: 22px
+        font-weight: 700
+
+    span
+        font-size: 12px
+        font-weight: 500
+        text-transform: uppercase
+
+.post_title
+    font-family: "Montserrat", sans-serif
+    font-size: 14px
+    font-weight: 500
+    text-transform: uppercase
+    color: $dark
+    margin-bottom: 6px
+
+    a:hover
+        color: $red
+
+.post_meta
+    font-size: 12px
+    font-style: italic
+    color: $text
+
+    a
+        color: $red
+
+.post_text
+    margin-bottom: 18px
+
+.post_more
+    font-size: 12px
+    font-weight: 700
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $red
     transition: .5s
-    max-width: 100%
-    @if $fixed
-        width: 190px
-        box-shadow: 0 0 10.5px rgba(204,204,223,0.5)
-        background-color: #fff
-        border: 1px solid #d7dbe8
-        &:hover
-            border-color: transparent
-            color: #fff
-            background-color: #6e45e2
-    @else
-        width: 150px
-        color: #d7dbe8
-        background-color: transparent
-        border: 1px solid #fff
-        &:hover
-            color: #6e45e2
-            border-color: #6e45e2
-    @if $empty != false
-        border: 1px solid #6e45e2
-        background-color: #6e45e2
-        color: #d7dbe8
+    &:hover
+        color: #555555
+
+.clients
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    gap: 30px 45px
+    margin-bottom: 60px
+
+    img
+        height: 34px
+        width: auto
+        opacity: .85
+
+        +media(768)
+            height: 40px
+
+.quote
+    max-width: 760px
+    margin: 0 auto
+    text-align: center
+
+.quote_text
+    font-size: 16px
+    font-style: italic
+    line-height: 1.6
+    margin-bottom: 30px
+
+    +media(768)
+        font-size: 20px
+
+.quote_author
+    font-size: 18px
+    font-style: normal
+    color: $dark
+
+.dots
+    display: flex
+    justify-content: center
+    gap: 6px
+    margin-top: 35px
+
+    span
+        width: 9px
+        height: 9px
+        border-radius: 50%
+        background-color: $line
         transition: .5s
+
         &:hover
-            color: #000
+            background-color: $red
+
+.contact
+    display: grid
+    grid-template-columns: 1fr
+    gap: 40px
+
+    +media(1024)
+        grid-template-columns: 340px 1fr
+        gap: 58px
+
+.contact_info li
+    display: flex
+    align-items: flex-start
+    gap: 12px
+    margin-bottom: 25px
+
+    svg
+        flex-shrink: 0
+        width: 18px
+        height: 18px
+        margin-top: 3px
+        fill: $dark
+        color: $dark
+
+    h4
+        font-family: "Montserrat", sans-serif
+        font-size: 14px
+        font-weight: 500
+        text-transform: uppercase
+        color: $dark
+        margin-bottom: 6px
+
+    p
+        font-size: 12px
+
+.form
+    display: grid
+    grid-template-columns: 1fr
+    gap: 15px 30px
+
+    +media(768)
+        grid-template-columns: repeat(2, 1fr)
+
+    input,
+    textarea
+        width: 100%
+        padding: 13px 15px
+        border: 1px solid $text
+        border-radius: 0
+        background-color: #fff
+        font-size: 12px
+        color: $dark
+        outline: none
+        transition: border-color .3s
+
+        &::placeholder
+            text-transform: uppercase
+            color: $text
+
+        &:focus
+            border-color: $red
+
+    textarea
+        height: 120px
+        resize: vertical
+
+.form_wide
+    grid-column: 1 / -1
+
+.form_bottom
+    grid-column: 1 / -1
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 15px
+
+    +media(768)
+        flex-direction: row
+        align-items: center
+        gap: 30px
+
+.form_note
+    font-size: 12px
+
+    span
+        color: $red
+
+footer
+    background-color: $red
+    padding: 60px 0 70px
+    text-align: center
+    color: #fff
+    width: 100%
+
+    +media(768)
+        padding: 80px 0 90px
+
+.footer_socials
+    display: flex
+    justify-content: center
+    gap: 12px
+
+    a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 36px
+        height: 36px
+        border: 2px solid #fff
+        border-radius: 50%
+        color: #fff
+        transition: .3s
+
+        &:hover
+            background-color: #fff
+            color: $red
+
+    svg
+        width: 16px
+        height: 16px
+        fill: currentColor
+
+.footer_line
+    width: 50px
+    height: 2px
+    background-color: #fff
+    margin: 25px auto
+
+.footer_p
+    font-size: 12px
+    text-transform: uppercase

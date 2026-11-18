@@ -1,82 +1,108 @@
 -
-    let navigationMenu = [
-        ["Home", "index.html"],
-        ["Why MISOCIAL", "#"],
-        ["Features", "#"],
-        ["Articles", "#"],
-        ["Pricing", "#"]
+    const navigationMenu = [
+        { name: 'Home', link: '#home' },
+        { name: 'Services', link: '#services' },
+        { name: 'About', link: '#about' },
+        { name: 'Works', link: '#works' },
+        { name: 'Blog', link: '#blog' },
+        { name: 'Clients', link: '#clients' },
+        { name: 'Contact', link: '#contact' }
     ]
 
-mixin menu(menuItems)
-    button.burger(type="button" aria-label="Toggle menu")
-        svg(viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-            path(d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round")
-    
-    .navigation
-        .logo
-            a(href="index.html")
-                img(src="assets/images/Symbol.svg", alt="logomisocial")
-                span.nazva misocial
-        .lopata
-            .x 
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="30" height="30">
-                <path fill="rgb(255, 255, 255)" d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z"/>
-                </svg>
+    const servicesInfo = [
+        { icon: 'a', title: 'Clean Typography', active: true },
+        { icon: 'code', title: 'Rock Solid Code', active: false },
+        { icon: 'support', title: 'Expert Support', active: false }
+    ]
 
+    const teamInfo = [
+        { img: 'team-1.jpg', name: 'Md. Khalil Uddin', role: 'Head of Ideas' },
+        { img: 'team-2.jpg', name: 'Rubel Miah', role: 'Lead WordPress Developer' },
+        { img: 'team-3.jpg', name: 'Shamim Mia', role: 'Sr. Web Developer' },
+        { img: 'team-4.jpg', name: 'John Doe', role: 'Front-end Developer' }
+    ]
+
+    const worksInfo = [
+        { img: 'work-1.jpg', title: 'Hair Dresser', category: 'Branding' },
+        { img: 'work-2.jpg', title: 'Peace Dove', category: 'Design' },
+        { img: 'work-3.jpg', title: 'Workspace', category: 'Branding' },
+        { img: 'work-4.jpg', title: 'Camera', category: 'Development' },
+        { img: 'work-5.jpg', title: 'Bicycle', category: 'Design' },
+        { img: 'work-6.jpg', title: 'Notebook', category: 'Strategy' },
+        { img: 'work-7.jpg', title: 'Green Desk', category: 'Branding' },
+        { img: 'work-8.jpg', title: 'Paper Colors', category: 'Design' },
+        { img: 'work-9.jpg', title: 'Events', category: 'Strategy' }
+    ]
+
+    const postsInfo = [
+        { img: 'blog-1.jpg', title: 'Startup ideas needs to be funded', author: 'Khalil Uddin', category: 'Development' },
+        { img: 'blog-2.jpg', title: 'User interface designing elements', author: 'Khalil Uddin', category: 'Development' }
+    ]
+
+    const clientsInfo = ['client-1.png', 'client-2.png', 'client-3.png', 'client-4.png', 'client-5.png']
+
+mixin icon(name)
+    case name
+        when 'a'
+            <svg viewBox="0 0 40 40"><text x="20" y="30" text-anchor="middle" font-size="32" font-weight="bold" font-family="Georgia, serif" fill="currentColor">A</text></svg>
+        when 'code'
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 12L6 20l8 8M26 12l8 8-8 8M23 9l-6 22"/></svg>
+        when 'support'
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="3"><circle cx="20" cy="20" r="14"/><circle cx="20" cy="20" r="6"/><path d="M10 10l6 6M30 10l-6 6M10 30l6-6M30 30l-6-6"/></svg>
+
+mixin menu(items)
+    button.burger(type="button", aria-label="Open menu", aria-expanded="false")
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    div.navigation
+        button.x(type="button", aria-label="Close menu")
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        div.lopata
             nav
                 ul.menu
-                    for item in menuItems
+                    each item in items
                         li
-                            a(href=item[1]) #{item[0]} 
-            a(href="#" class="btn") get started
+                            a(href=item.link)= item.name
 
--
-    let cardsInfo = {
-        satelite: {
-            img: "assets/images/spytnik.svg",
-            alt: "satelite",
-            personal: "personal",
-            currency: "$",
-            price: "0",
-            isMonth: true,
-            description: ["Lorem ipsum dolor sit amet.", "sed do eiusmod tempor incididunt ut.", "Labore et dolore magna aliqua.", "quis nostrud exercitation ullamco laboris.", "Ea commodo consequat."],
-            btnText: "select plan",
-            href: "#"
-        },
-        marsohod: {
-            img: "assets/images/marsohod.svg",
-            alt: "rover",
-            personal: "personal",
-            currency: "$",
-            price: "29",
-            isMonth: true,
-            description: ["Lorem ipsum dolor sit amet.", "sed do eiusmod tempor incididunt ut.", "Labore et dolore magna aliqua.", "quis nostrud exercitation ullamco laboris.", "Ea commodo consequat."],
-            btnText: "select plan",
-            href: "#"
-        },
-        rocket: {
-            img: "assets/images/rocket.svg",
-            alt: "rocket",
-            personal: "personal",
-            currency: "$",
-            price: "49",
-            isMonth: true,
-            description: ["Lorem ipsum dolor sit amet.", "sed do eiusmod tempor incididunt ut.", "Labore et dolore magna aliqua.", "quis nostrud exercitation ullamco laboris.", "Ea commodo consequat."],
-            btnText: "select plan",
-            href: "#"
-        }
-    }
+mixin service(info)
+    article.service
+        div.service_icon(class=info.active ? 'active' : '')
+            +icon(info.icon)
+        h3.service_title= info.title
+        p.service_text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum.
 
-mixin card(oneCard)
-    figure.card.aic
-        img.card_img(src=oneCard.img, alt=oneCard.alt)
-        figcaption.aic
-            p.personal #{oneCard.personal}
-            p.price 
-                span.currency #{oneCard.currency}
-                b #{oneCard.price}
-                | #{oneCard.isMonth ? '/month' : '/year'}
-            ul.description 
-                for item in oneCard.description 
-                    li #{item} 
-            a.btn.card_btn(href=oneCard.href) #{oneCard.btnText}
+mixin member(info)
+    article.team_member
+        img.team_photo(src=`assets/images/${info.img}`, alt=info.name)
+        h3.team_name= info.name
+        p.team_role= info.role
+
+mixin work(info)
+    a.work(href="#")
+        img(src=`assets/images/${info.img}`, alt=info.title)
+        div.work_hover
+            h3.work_title= info.title
+            p.work_cat= info.category
+            span.work_view View &rsaquo;
+
+mixin post(info, date)
+    article.post
+        img.post_img(src=`assets/images/${info.img}`, alt=info.title)
+        div
+            div.post_head
+                div.post_date
+                    b= date.day
+                    span= date.month
+                div
+                    h3.post_title
+                        a(href="#")= info.title
+                    p.post_meta
+                        | By 
+                        a(href="#")= info.author
+                        |  in 
+                        a(href="#")= info.category
+            p.post_text Lorem ipsum dolor sit amet, consectetur adipiscing elitr, sed diam nonumy eirmod tedundlabore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et erebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit am Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidulabore et dolore aliquayam erat, sed diam
+            a.post_more(href="#") Read more
+
+mixin social
+    a(href="#", aria-label="Twitter")
+        <svg viewBox="0 0 640 640"><path d="M523.4 215.7C523.7 220.2 523.7 224.8 523.7 229.3C523.7 368 418.1 527.9 225.1 527.9C165.6 527.9 110.4 510.7 64 480.8C72.4 481.8 80.6 482.1 89.3 482.1C138.4 482.1 183.5 465.5 219.6 437.3C173.5 436.3 134.8 406.1 121.5 364.5C128 365.5 134.5 366.1 141.3 366.1C150.7 366.1 160.1 364.8 168.9 362.5C120.8 352.8 84.8 310.5 84.8 259.5L84.8 258.2C98.8 266 115 270.9 132.2 271.5C103.9 252.7 85.4 220.5 85.4 184.1C85.4 164.6 90.6 146.7 99.7 131.1C151.4 194.8 229 236.4 316.1 240.9C314.5 233.1 313.5 225 313.5 216.9C313.5 159.1 360.3 112 418.4 112C448.6 112 475.9 124.7 495.1 145.1C518.8 140.6 541.6 131.8 561.7 119.8C553.9 144.2 537.3 164.6 515.6 177.6C536.7 175.3 557.2 169.5 576 161.4C561.7 182.2 543.8 200.7 523.4 215.7z"/></svg>
